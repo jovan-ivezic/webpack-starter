@@ -12,7 +12,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 module.exports = {
     entry: [
         './src/app/app.js',
-        './src/scss/main.scss'
+        './src/scss/style.scss'
     ],
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -27,7 +27,7 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.handlebars$/, loader: "handlebars-loader" },
+            { test: /\.hbs$/, loader: "handlebars-loader" },
             {
                 test: /\.(scss|css)$/,
                 use: [
@@ -71,8 +71,8 @@ module.exports = {
         }),  
          
         new HtmlWebpackPlugin({
-            title: 'My awesome service',
-            template: './src/index.handlebars',
+            title: 'Webpack starter',
+            template: './src/templates/index.hbs',
             minify: !isDevelopment && {
                 html5: true,
                 collapseWhitespace: true,
