@@ -85,11 +85,12 @@ module.exports = {
         new CopyWebpackPlugin([{
            from: './src/img',
            to: path.resolve(__dirname, '../dist/img')
-        }]),
+        }])
+        // ,
 
-        new ImageminPlugin({
-            pngquant: ({ quality: [50] }),
-            plugins: [imageminMozjpeg({ quality: 50 })]
-        })
+        // new ImageminPlugin({
+        //     pngquant: ({ quality: [50] }),
+        //     plugins: [imageminMozjpeg({ quality: 50 })]
+        // })
       ]
   };
