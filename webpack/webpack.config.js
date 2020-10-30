@@ -10,6 +10,7 @@ const autoprefixer = require('autoprefixer');
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
+    cache: false,
     entry: [
         './src/app/app.js',
         './src/scss/style.scss'
